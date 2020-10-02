@@ -5,19 +5,34 @@ const router = new Router({
 	prefix: "/api",
 });
 
+//测试api
+
 router.get("/", async (ctx, next) => {
 	await ctx.render("index", {
 		title: "Hello Koa 2!",
 	});
 });
-
 router.get("/string", async (ctx, next) => {
 	ctx.body = "koa2 string";
 });
-
 router.get("/json", async (ctx, next) => {
 	ctx.body = {
 		title: "koa2 json",
+		data: "data!",
+	};
+});
+
+//公用api
+
+//date
+router.get("/date", async (ctx, next) => {
+	let time = new Date();
+	console.log(time);
+	let tmp =
+		time.getFullYear() + " / " + (time.getMonth() + 1) + " / " + time.getDate();
+	ctx.body = {
+		title: "date",
+		data: tmp,
 	};
 });
 

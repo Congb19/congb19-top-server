@@ -5,6 +5,7 @@ const json = require("koa-json");
 const onerror = require("koa-onerror");
 const bodyparser = require("koa-bodyparser");
 const logger = require("koa-logger");
+const cors = require("koa-cors");
 
 const index = require("./routes/index");
 const users = require("./routes/users");
@@ -18,6 +19,9 @@ app.use(
 		enableTypes: ["json", "form", "text"],
 	})
 );
+// 使用koa-cors
+app.use(cors());
+
 app.use(json());
 app.use(logger());
 app.use(require("koa-static")(__dirname + "/public"));
