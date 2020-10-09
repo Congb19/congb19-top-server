@@ -34,7 +34,7 @@ router.get("/date", async (ctx, next) => {
 		title: "date",
 		data: {
 			year: time.getFullYear(),
-			month: time.getMonth(),
+			month: time.getMonth() + 1,
 			date: time.getDate(),
 			day: time.getDay() + 1,
 		},
