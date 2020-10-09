@@ -28,11 +28,16 @@ router.get("/json", async (ctx, next) => {
 router.get("/date", async (ctx, next) => {
 	let time = new Date();
 	console.log(time);
-	let tmp =
+	let str =
 		time.getFullYear() + " / " + (time.getMonth() + 1) + " / " + time.getDate();
 	ctx.body = {
 		title: "date",
-		data: tmp,
+		data: {
+			year: time.getFullYear(),
+			month: time.getMonth(),
+			date: time.getDate(),
+			day: time.getDay() + 1,
+		},
 	};
 });
 
