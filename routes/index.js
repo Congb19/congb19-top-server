@@ -32,11 +32,12 @@ router.get("/date", async (ctx, next) => {
 		time.getFullYear() + " / " + (time.getMonth() + 1) + " / " + time.getDate();
 	ctx.body = {
 		title: "date",
+		code: 200,
 		data: {
 			year: time.getFullYear(),
 			month: time.getMonth() + 1,
 			date: time.getDate(),
-			day: time.getDay() + 1,
+			day: time.getDay(),
 		},
 	};
 });
