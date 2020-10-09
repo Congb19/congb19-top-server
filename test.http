@@ -1,5 +1,6 @@
-http://47.101.42.80:8001/api/date
+# http://47.101.42.80:8001/api/date
 
 # http://localhost:8001/api/json
 
-# http://localhost:8001/api/date
+# http://localhost:8001/api/public/getDate
+http://localhost:8001/api/public/getLuckyNumber
