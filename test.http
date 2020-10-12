@@ -6,4 +6,12 @@
 # http://localhost:8001/api/public/getDate
 # http://localhost:8001/api/public/getLuckyNumber
 
-http://www.congb19.top/api/public/getDate
+# http://www.congb19.top/api/public/getDate
+POST http://localhost:8001/api/public/createTrashArticle
+content-type: application/json;charset=UTF-8
+
+{
+  "main": "橘子",
+  "event": "很好吃",
+  "anotherEvent": "橘子酸酸甜甜的"
+}

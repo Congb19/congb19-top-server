@@ -22,36 +22,4 @@ router.get("/json", async (ctx, next) => {
 	};
 });
 
-//公用api
-
-//date
-router.get("/public/getDate", async (ctx, next) => {
-	let time = new Date();
-	console.log(time);
-	let str =
-		time.getFullYear() + " / " + (time.getMonth() + 1) + " / " + time.getDate();
-	ctx.body = {
-		title: "date",
-		code: 200,
-		data: {
-			year: time.getFullYear(),
-			month: time.getMonth() + 1,
-			date: time.getDate(),
-			day: time.getDay(),
-		},
-	};
-});
-
-//luckyNumber
-router.get("/public/getLuckyNumber", async (ctx, next) => {
-	let luckyNumber = Math.ceil(Math.random() * 100);
-	ctx.body = {
-		title: "luckyNumber",
-		code: 200,
-		data: {
-			luckyNumber,
-		},
-	};
-});
-
 module.exports = router;
