@@ -1,3 +1,6 @@
+@host=http://www.congb19.top/api
+# @host=http://localhost:8001/api
+
 # http://47.101.42.80:8001/api/public/getDate
 # http://47.101.42.80:8001/api/public/getLuckyNumber
 
@@ -7,7 +10,7 @@
 # http://localhost:8001/api/public/getLuckyNumber
 
 # http://www.congb19.top/api/public/getDate
-POST http://localhost:8001/api/public/createTrashArticle
+POST {{host}}/public/createTrashArticle
 content-type: application/json;charset=UTF-8
 
 {
@@ -15,3 +18,5 @@ content-type: application/json;charset=UTF-8
   "event": "很好吃",
   "anotherEvent": "橘子酸酸甜甜的"
 }
+
+# GET http://qa.edusoho.cn/api/resource_favorite
