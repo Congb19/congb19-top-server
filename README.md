@@ -10,19 +10,22 @@ koa2, mysql
 
 baseURL: http://www.congb19.top/api
 
-### 公用 api
+### 一、公用 api
 
-#### 获取日期 getDate
+#### 1. 获取日期 getDate
 
 ##### REQUEST
+
 ```
 GET /public/getDate
 ```
-##### RESPONSE 示例
+
+##### RESPONSE
+
 ```
 {
   title: "date__{year} / {month} / {date}",
-  code: Number,
+  code: 200,
   data: {
     year: 2020,
     month: 1,
