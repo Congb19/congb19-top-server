@@ -4,7 +4,9 @@ congb19-top 网站后端。
 
 ## 技术栈
 
-koa2, mysql
+核心：node + koa2,
+
+数据库：sequelize + mysql2
 
 ### 开发环境
 
