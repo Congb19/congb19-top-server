@@ -1,9 +1,9 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("congb19-top-sql", "root", "", {
+const sequelize = new Sequelize("test", "test", "QWER1234", {
 	host: "localhost",
 	dialect: "mysql",
-	operatorsAliases: false,
+	// operatorsAliases: false,
 	dialectOptions: {
 		// 字符集
 		charset: "utf8mb4",
