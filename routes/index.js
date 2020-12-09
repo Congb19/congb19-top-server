@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const TestController = require('../controllers/test')
+const TestController = require("../controllers/test");
 
 const router = new Router({
 	prefix: "/api",
@@ -21,5 +21,18 @@ router.get("/json", async (ctx, next) => {
 		data: "data!",
 	};
 });
+let ctx = {
+	request: {
+		body: {
+			id: 1,
+			title: "123",
+			author: "Congb19",
+			content: "123123",
+			category: "ghs",
+		},
+	},
+};
+// TestController.create(ctx);
 
+// console.log("okokokok");
 module.exports = router;
