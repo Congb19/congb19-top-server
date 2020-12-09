@@ -3,15 +3,18 @@
     └── test.js
 */
 
-// 引入刚刚在第五点建立连接mysql数据库的db.js文件
+// 引入mysql数据库配置文件
 const db = require("../config/db");
 // 引入Sequelize对象
 const Sequelize = db.sequelize;
 // 引入上一步的文章数据表模型文件
 const Test = Sequelize.import("../schemas/test");
-// 自动创建表
-Test.sync({ force: false });
-
+// 自动同步表
+const fsync = async () => {
+	await Test.sync({ force: false });
+	console.log("表结构同步成功");
+};
+fsync();
 class TestModel {
 	/**
 	 * 创建文章模型
