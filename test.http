@@ -10,13 +10,15 @@
 # http://localhost:8001/api/public/getLuckyNumber
 
 # http://www.congb19.top/api/public/getDate
-POST {{host}}/public/createTrashArticle
-content-type: application/json;charset=UTF-8
+# POST {{host}}/public/createTrashArticle
+# content-type: application/json;charset=UTF-8
 
-{
-  "main": "橘子",
-  "event": "很好吃",
-  "anotherEvent": "橘子酸酸甜甜的"
-}
+# {
+#   "main": "橘子",
+#   "event": "很好吃",
+#   "anotherEvent": "橘子酸酸甜甜的"
+# }
 
 # GET http://qa.edusoho.cn/api/resource_favorite
+
+GET http://discuz.1inf0.com/api/forum?include=users

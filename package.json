@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "hotnode bin/www",
+    "start": "pm2 start bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
+    "list": "pm2 list",
     "prd": "pm2 start bin/www",
+    "restart": "pm2 restart 0",
+    "stop": "pm2 stop 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "hotnode": "^0.0.8",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-convert": "^1.2.0",
