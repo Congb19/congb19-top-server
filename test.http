@@ -1,5 +1,18 @@
-@host=http://www.congb19.top/api
+# @host=http://www.congb19.top/api
 # @host=http://localhost:8001/api
+@host=http://146.56.224.139:4000/v1/graphql
+
+# GET {{host}}
+
+POST {{host}}
+content-type: application/json;charset=UTF-8
+
+{
+  "query": "query MyQuery {jh_bbs_comments {id}}"
+}
+
+  # "operationName": "MyQuery",
+  # "variables": null,
 
 # http://47.101.42.80:8001/api/public/getDate
 # http://47.101.42.80:8001/api/public/getLuckyNumber
@@ -21,4 +34,4 @@
 
 # GET http://qa.edusoho.cn/api/resource_favorite
 
-GET http://discuz.1inf0.com/api/forum?include=users
+# GET http://discuz.1inf0.com/api/forum?include=users
