@@ -3,3 +3,8 @@ node_modules
 test.http
 
 .DS_store
+
+yarn-error.log
+.pnpm*
+/yarn.lock
+pnpm-lock.yaml
